@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude_ai_Google_Drive__download_file_content",
+      "mcp__claude_ai_Google_Drive__search_files",
+      "mcp__claude_ai_Google_Drive__get_file_metadata",
+      "Bash(python3 *)",
+      "Bash(rm -f /private/tmp/claude-501/-Users-macbookair-my-imagenic-portfolio/bb5958b7-1196-4da9-9ba7-df2ac9d45a8e/scratchpad/adha_shania_shortcuts.json)",
+      "Read(//private/tmp/**)"
+    ]
+  }
+}

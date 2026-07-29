@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/*
+  Design tokens for the "light luxury" aesthetic.
+  Tailwind v4 reads this @theme block to generate utilities
+  (e.g. --color-paper -> bg-paper/text-paper, --font-display -> font-display).
+  Font files are loaded in main.jsx via @fontsource.
+*/
+@theme {
+  --color-paper: #f8f4ec;
+  --color-paper-soft: #ece4d6;
+  --color-ink: #1a1611;
+  --color-gold: #7a5c1f;
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+    scrollbar-color: var(--color-gold) var(--color-paper);
+  }
+
+  body {
+    @apply bg-paper font-body text-ink antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-gold);
+    color: var(--color-paper);
+  }
+}
