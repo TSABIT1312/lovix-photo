@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 
 const container = {
@@ -17,33 +17,21 @@ const item = {
   },
 }
 
-const SLIDE_DURATION = 5000
-
 /**
  * Full-viewport hero. `images` is optional so the section still reads as
  * intentional (gradient backdrop) before real photos are dropped into
  * src/assets/hero/ and passed in here. Accepts either a single image (string)
- * or an array of images to render as an auto-advancing, swipeable slideshow
- * with numbered navigation.
+ * or an array of images to render as a swipeable slideshow with numbered
+ * navigation.
  */
 function Hero({ image, images, title = 'Lovix Photo', subtitle = 'Capturing timeless wedding stories.' }) {
   const reduceMotion = useReducedMotion()
   const slides = images && images.length > 0 ? images : image ? [image] : []
   const [index, setIndex] = useState(0)
-  const [tick, setTick] = useState(0)
   const imgRef = useRef(null)
-
-  useEffect(() => {
-    if (slides.length <= 1 || reduceMotion) return
-    const id = setInterval(() => {
-      setIndex((current) => (current + 1) % slides.length)
-    }, SLIDE_DURATION)
-    return () => clearInterval(id)
-  }, [slides.length, reduceMotion, tick])
 
   const goTo = (i) => {
     setIndex(((i % slides.length) + slides.length) % slides.length)
-    setTick((t) => t + 1)
   }
 
   const handleDragEnd = (_event, info) => {
@@ -77,22 +65,18 @@ function Hero({ image, images, title = 'Lovix Photo', subtitle = 'Capturing time
               fetchPriority="high"
               initial={reduceMotion ? false : { opacity: 0, scale: 1.02 }}
               animate={reduceMotion ? undefined : { opacity: 1, scale: 1.06 }}
-              exit={reduceMotion ? undefined : { opacity: 0, transition: { duration: 0.5, ease: 'easeInOut' } }}
+              exit={reduceMotion ? undefined : { opacity: 0, transition: { duration: 0.25, ease: 'easeInOut' } }}
               transition={
                 reduceMotion
                   ? undefined
                   : {
-                      opacity: { duration: 0.6, ease: 'easeInOut' },
-                      scale: { duration: 20, ease: 'linear' },
+                      opacity: { duration: 0.3, ease: 'easeInOut' },
+                      scale: { duration: 10, ease: 'linear' },
                     }
               }
               className="pointer-events-none absolute inset-0 h-full w-full object-cover"
             />
           </AnimatePresence>
-          {/* Contrast overlay so dark text stays legible over the photo — only
-              needed when there's real photo content behind it, not the paper gradient. */}
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-paper/60 via-paper/35 to-paper/75" />
-
           {/* Stable, never-remounted hit layer for swipe/drag + tap-to-navigate —
               kept separate from the crossfading <img> above so a mid-transition
               tap can never land on a stale, about-to-unmount slide instance. */}
@@ -165,14 +149,18 @@ function Hero({ image, images, title = 'Lovix Photo', subtitle = 'Capturing time
       >
         <motion.h1
           variants={item}
-          className="whitespace-nowrap font-display text-2xl font-medium uppercase tracking-[0.14em] text-ink sm:text-5xl sm:tracking-[0.35em] md:text-6xl lg:text-7xl xl:text-8xl xl:tracking-[0.28em]"
+          className={`whitespace-nowrap font-display text-2xl font-medium uppercase tracking-[0.14em] sm:text-5xl sm:tracking-[0.35em] md:text-6xl lg:text-7xl xl:text-8xl xl:tracking-[0.28em] ${
+            slides.length > 0 ? 'text-paper drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]' : 'text-ink'
+          }`}
         >
           {title}
         </motion.h1>
 
         <motion.p
           variants={item}
-          className="mt-3 max-w-xs whitespace-nowrap font-display text-sm italic text-ink/80 sm:mt-6 sm:max-w-sm sm:text-xl"
+          className={`mt-3 max-w-xs whitespace-nowrap font-display text-sm italic sm:mt-6 sm:max-w-sm sm:text-xl ${
+            slides.length > 0 ? 'text-paper/90 drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]' : 'text-ink/80'
+          }`}
         >
           {subtitle}
         </motion.p>
