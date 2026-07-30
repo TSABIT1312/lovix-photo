@@ -21,7 +21,7 @@ const item = {
  * intentional (gradient backdrop) before a real photo is dropped into
  * src/assets/hero/ and passed in here.
  */
-function Hero({ image, title = 'Loxix Photo', subtitle = 'Capturing timeless wedding stories.' }) {
+function Hero({ image, title = 'Lovix Photo', subtitle = 'Capturing timeless wedding stories.' }) {
   const reduceMotion = useReducedMotion()
 
   return (

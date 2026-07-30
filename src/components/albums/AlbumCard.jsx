@@ -7,7 +7,7 @@ import { cn, focusRing } from '@/lib/utils'
  * A corner scrim keeps it legible regardless of what's underneath.
  */
 function AlbumCard({ album, size = 'standard' }) {
-  const { slug, coverImage, coupleNames, location, year, shortTitle } = album
+  const { slug, coverImage, coupleNames, shortTitle } = album
   const isLarge = size === 'large'
 
   return (
@@ -37,9 +37,6 @@ function AlbumCard({ album, size = 'standard' }) {
             )}
           >
             {coupleNames}
-          </p>
-          <p className="text-xs uppercase tracking-[0.2em] text-paper/70">
-            {location} <span className="text-gold">&middot;</span> {year}
           </p>
         </div>
       </div>

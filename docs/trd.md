@@ -2,7 +2,7 @@
 
 ## Project Name
 
-Loxix Photo
+Lovix Photo
 
 ## Version
 
@@ -10,7 +10,7 @@ v1.0
 
 ## Overview
 
-Loxix Photo adalah website portfolio wedding photography berbasis React yang dirancang sebagai single-page application (SPA).
+Lovix Photo adalah website portfolio wedding photography berbasis React yang dirancang sebagai single-page application (SPA).
 
 Arsitektur sistem harus sederhana, mudah dipelihara, cepat diakses, dan berfokus pada penyajian karya fotografi dengan performa optimal.
 
@@ -412,7 +412,7 @@ Desktop
 ## Meta Title
 
 ```txt
-Loxix Photo | Wedding Photography
+Lovix Photo | Wedding Photography
 ```
 
 ---
@@ -420,7 +420,7 @@ Loxix Photo | Wedding Photography
 ## Meta Description
 
 ```txt
-Premium wedding photography portfolio by Loxix Photo. Capturing timeless love stories through elegant and emotional imagery.
+Premium wedding photography portfolio by Lovix Photo. Capturing timeless love stories through elegant and emotional imagery.
 ```
 
 ---

@@ -26,16 +26,15 @@ function CameraIcon() {
 }
 
 /**
- * Props (per docs/trd.md): { whatsapp, instagram }. Defaults are placeholders —
- * swap for the real number/handle before launch.
+ * Props (per docs/trd.md): { whatsapp, instagram }.
  *
  * `variant="compact"` is used when this closes out a Story Detail Page
  * (tighter padding, no leading hairline — the gallery above it already
  * provides enough visual separation) instead of the full homepage section.
  */
 function Contact({
-  whatsapp = 'https://wa.me/6281234567890',
-  instagram = 'https://instagram.com/loxix.photo',
+  whatsapp = 'https://wa.me/6287898330458',
+  instagram = 'https://www.instagram.com/lovixphoto',
   variant = 'full',
 }) {
   const reduceMotion = useReducedMotion()
@@ -77,7 +76,7 @@ function Contact({
           <div className="mt-20 flex items-center gap-3 text-ink/60">
             <span className="h-px w-8 bg-ink/20" aria-hidden="true" />
             <p className="font-display text-[0.65rem] font-medium uppercase tracking-[0.3em]">
-              Loxix Photo &copy; {new Date().getFullYear()}
+              Lovix Photo &copy; {new Date().getFullYear()}
             </p>
             <span className="h-px w-8 bg-ink/20" aria-hidden="true" />
           </div>

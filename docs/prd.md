@@ -2,7 +2,7 @@
 
 ## Product Name
 
-Loxix Photo
+Lovix Photo
 
 ## Product Type
 
@@ -16,7 +16,7 @@ v1.0
 
 Membangun website portfolio wedding photography yang premium, minimalis, dan berfokus penuh pada hasil karya fotografi.
 
-Website harus mampu menciptakan kesan emosional dalam beberapa detik pertama setelah dibuka, sehingga calon klien langsung memahami kualitas visual dan gaya fotografi Loxix Photo tanpa harus membaca banyak informasi.
+Website harus mampu menciptakan kesan emosional dalam beberapa detik pertama setelah dibuka, sehingga calon klien langsung memahami kualitas visual dan gaya fotografi Lovix Photo tanpa harus membaca banyak informasi.
 
 ---
 
@@ -26,7 +26,7 @@ Sebagian besar website fotografer terlalu banyak berisi informasi, menu, dan tek
 
 Calon klien wedding photography umumnya tidak tertarik membaca profil panjang atau spesifikasi peralatan kamera. Mereka ingin melihat hasil foto secepat mungkin dan memutuskan apakah gaya visual tersebut sesuai dengan pernikahan mereka.
 
-Saat ini belum tersedia media digital yang secara efektif menampilkan kualitas karya Loxix Photo dengan pendekatan visual-first.
+Saat ini belum tersedia media digital yang secara efektif menampilkan kualitas karya Lovix Photo dengan pendekatan visual-first.
 
 ---
 
@@ -34,7 +34,7 @@ Saat ini belum tersedia media digital yang secara efektif menampilkan kualitas k
 
 ### Business Goals
 
-* Meningkatkan kredibilitas brand Loxix Photo.
+* Meningkatkan kredibilitas brand Lovix Photo.
 * Menampilkan portfolio secara profesional.
 * Meningkatkan jumlah inquiry melalui WhatsApp.
 * Mengarahkan traffic ke Instagram.
@@ -73,7 +73,7 @@ Karakteristik:
 
 # Value Proposition
 
-Loxix Photo menghadirkan pengalaman melihat portfolio wedding photography yang elegan, emosional, dan tanpa distraksi sehingga setiap foto dapat berbicara dengan sendirinya.
+Lovix Photo menghadirkan pengalaman melihat portfolio wedding photography yang elegan, emosional, dan tanpa distraksi sehingga setiap foto dapat berbicara dengan sendirinya.
 
 ---
 
@@ -169,7 +169,7 @@ Langkah:
 3. Scroll melihat portfolio.
 4. Tertarik dengan hasil foto.
 5. Klik WhatsApp.
-6. Menghubungi Loxix Photo.
+6. Menghubungi Lovix Photo.
 
 ---
 

@@ -19,13 +19,20 @@ function FeaturedStories() {
           whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mx-auto mb-16 max-w-xl text-center sm:mb-20"
+          className="mx-auto mb-16 max-w-2xl text-center sm:mb-20"
         >
           <p className="font-display text-xs font-medium uppercase tracking-[0.4em] text-gold">
             Wedding Stories
           </p>
-          <p className="mt-6 font-display text-2xl italic text-ink sm:text-3xl">
-            A curated collection of the weddings we&apos;ve had the honor to tell.
+          <p className="mt-6 font-body text-sm leading-relaxed text-ink/70 sm:text-base">
+            At LOVIXPHOTO, we believe that every love story deserves to be beautifully remembered. We do more than
+            just capture moments—we preserve emotions, genuine connections, and timeless memories that you can
+            relive for years to come. Based in the Jakarta and Banten areas, we specialize in wedding, pre-wedding,
+            and engagement photography, as well as event documentation. Our approach blends natural storytelling,
+            elegant composition, and a signature editing style to create images that feel both authentic and
+            timeless. Every couple has a unique story, and our mission is to tell that story through meaningful
+            images filled with emotion, beauty, and unforgettable moments. LOVIXPHOTO — Capturing Your Story,
+            Creating Timeless Memories.
           </p>
         </motion.div>
 

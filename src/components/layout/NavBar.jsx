@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { cn, focusRing } from '@/lib/utils'
 
 const navLinkClass = cn(
-  'text-xs uppercase tracking-[0.2em] text-ink/70 transition-colors hover:text-ink',
+  'whitespace-nowrap text-[10px] uppercase tracking-[0.15em] text-ink/70 transition-colors hover:text-ink sm:text-xs sm:tracking-[0.2em]',
   focusRing,
 )
 
@@ -16,18 +16,18 @@ const navLinkClass = cn(
  */
 function NavBar() {
   return (
-    <header className="absolute inset-x-0 top-0 z-20 flex items-center justify-between px-6 py-6 sm:px-10 sm:py-8">
+    <header className="absolute inset-x-0 top-0 z-20 flex items-center justify-between px-4 py-5 sm:px-10 sm:py-8">
       <Link
         to="/"
         className={cn(
-          'font-display text-xs uppercase tracking-[0.3em] text-ink transition-colors hover:text-ink/70',
+          'whitespace-nowrap font-display text-[10px] uppercase tracking-[0.15em] text-ink transition-colors hover:text-ink/70 sm:text-xs sm:tracking-[0.3em]',
           focusRing,
         )}
       >
-        Loxix Photo
+        Lovix Photo
       </Link>
 
-      <nav className="flex items-center gap-6 sm:gap-8">
+      <nav className="flex items-center gap-4 sm:gap-8">
         <Link to="/#stories" className={navLinkClass}>
           View Stories
         </Link>

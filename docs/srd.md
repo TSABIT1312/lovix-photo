@@ -2,7 +2,7 @@
 
 ## Project Name
 
-Loxix Photo
+Lovix Photo
 
 ## Version
 
@@ -10,9 +10,9 @@ v1.0
 
 ## Overview
 
-Loxix Photo adalah website portfolio wedding photography berbasis single-page application yang berfokus pada penyajian karya fotografi secara visual, minimalis, dan premium.
+Lovix Photo adalah website portfolio wedding photography berbasis single-page application yang berfokus pada penyajian karya fotografi secara visual, minimalis, dan premium.
 
-Tujuan utama sistem adalah memungkinkan pengunjung melihat hasil fotografi dengan cepat dan menghubungi Loxix Photo melalui kanal komunikasi yang tersedia.
+Tujuan utama sistem adalah memungkinkan pengunjung melihat hasil fotografi dengan cepat dan menghubungi Lovix Photo melalui kanal komunikasi yang tersedia.
 
 ---
 
@@ -120,7 +120,7 @@ Pengguna dapat melihat foto dalam ukuran yang lebih besar.
 
 ### Description
 
-Pengguna dapat menghubungi Loxix Photo.
+Pengguna dapat menghubungi Lovix Photo.
 
 ### Requirements
 
