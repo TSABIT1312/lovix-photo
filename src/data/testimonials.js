@@ -1,25 +1,21 @@
-// Placeholder testimonials — short, honest stand-ins (no fabricated couple
-// names or claims) pending real client quotes, same policy already used for
-// the placeholder album cover in `albums.js`.
+import fiaRenndyPhoto from '@/assets/testimonials/fia-renndy.webp'
+import nengZhengPhoto from '@/assets/testimonials/neng-zheng.webp'
+
 export const testimonials = [
   {
-    id: 'testimonial-01',
+    id: 'testimonial-fia-renndy',
     quote:
-      'Every photo felt effortless — candid moments captured without us ever noticing the camera.',
-    name: 'Wedding Client',
-    role: 'Lovix Photo',
+      'Pengalaman prewedding bersama LOVIXPHOTO benar-benar menyenangkan. Timnya komunikatif, sabar, dan profesional. Hasil fotonya estetik, natural, dan setiap momen berhasil diabadikan dengan indah. Terima kasih LOVIXPHOTO, kami sangat puas dan pastinya akan merekomendasikan kepada teman maupun keluarga.',
+    name: 'Fia & Renndy',
+    role: 'Prewedding',
+    photo: fiaRenndyPhoto,
   },
   {
-    id: 'testimonial-02',
+    id: 'testimonial-neng-zheng',
     quote:
-      'They understood exactly what we wanted before we could even explain it. The gallery still gives us chills.',
-    name: 'Wedding Client',
-    role: 'Lovix Photo',
-  },
-  {
-    id: 'testimonial-03',
-    quote: 'Calm, unobtrusive, and incredibly skilled. Our families are still talking about the photos.',
-    name: 'Wedding Client',
-    role: 'Lovix Photo',
+      'MasyaAllah, hasil fotonya benar-benar cantik dan membuat kami terharu saat melihatnya. Setiap momen penting berhasil diabadikan dengan sangat baik. Tim LOVIXPHOTO juga sangat profesional, ramah, dan membuat kami merasa nyaman sepanjang acara. Terima kasih sudah menjadi bagian dari hari terbaik kami. Sangat puas dengan hasil dan pelayanannya!',
+    name: 'Neng & Zheng',
+    role: 'Wedding',
+    photo: nengZhengPhoto,
   },
 ]

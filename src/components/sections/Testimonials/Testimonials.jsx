@@ -79,6 +79,14 @@ function Testimonials() {
                 className="w-full text-center"
                 style={{ cursor: count > 1 ? 'grab' : undefined }}
               >
+                {active.photo && (
+                  <img
+                    src={active.photo}
+                    alt={active.name}
+                    className="mx-auto mb-6 h-20 w-20 rounded-full object-cover ring-1 ring-ink/10 sm:h-24 sm:w-24"
+                    draggable={false}
+                  />
+                )}
                 <p className="font-display text-xl italic leading-relaxed text-ink sm:text-2xl">
                   &ldquo;{active.quote}&rdquo;
                 </p>
