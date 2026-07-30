@@ -99,7 +99,7 @@ function Hero({ image, images, title = 'Lovix Photo', subtitle = 'Capturing time
                 type="button"
                 onClick={() => goTo(index - 1)}
                 aria-label="Previous slide"
-                className="absolute left-3 top-1/2 z-20 -translate-y-1/2 rounded-full p-2 text-ink/60 transition-colors duration-300 hover:text-ink sm:left-6"
+                className="absolute left-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-ink/15 p-2 text-paper drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)] backdrop-blur-sm transition-all duration-300 hover:bg-ink/30 sm:left-6"
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-6 w-6 sm:h-7 sm:w-7">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -109,7 +109,7 @@ function Hero({ image, images, title = 'Lovix Photo', subtitle = 'Capturing time
                 type="button"
                 onClick={() => goTo(index + 1)}
                 aria-label="Next slide"
-                className="absolute right-3 top-1/2 z-20 -translate-y-1/2 rounded-full p-2 text-ink/60 transition-colors duration-300 hover:text-ink sm:right-6"
+                className="absolute right-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-ink/15 p-2 text-paper drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)] backdrop-blur-sm transition-all duration-300 hover:bg-ink/30 sm:right-6"
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-6 w-6 sm:h-7 sm:w-7">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -127,8 +127,8 @@ function Hero({ image, images, title = 'Lovix Photo', subtitle = 'Capturing time
                   onClick={() => goTo(i)}
                   aria-label={`Go to slide ${i + 1}`}
                   aria-current={i === index}
-                  className={`font-display text-sm transition-colors duration-300 ${
-                    i === index ? 'text-ink' : 'text-ink/40 hover:text-ink/70'
+                  className={`font-display text-sm drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)] transition-colors duration-300 ${
+                    i === index ? 'text-paper' : 'text-paper/50 hover:text-paper/80'
                   }`}
                 >
                   {String(i + 1).padStart(2, '0')}
