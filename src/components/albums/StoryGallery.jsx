@@ -25,7 +25,7 @@ function StoryGallery({ photos = [] }) {
   return (
     <section aria-label="Full wedding gallery" className="bg-paper py-24 sm:py-32">
       <Container>
-        <div className="columns-2 gap-3 sm:gap-8 lg:columns-3 lg:gap-10">
+        <div className="columns-1 gap-3 sm:columns-2 sm:gap-8 lg:columns-3 lg:gap-10">
           {photos.map((photo, index) => (
             <motion.figure
               key={photo.id}

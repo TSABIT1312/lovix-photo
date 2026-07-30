@@ -62,12 +62,12 @@ function Contact({
             Let&apos;s capture your story next.
           </p>
 
-          <div className="mt-10 flex flex-row items-center gap-3 sm:gap-6">
-            <Button href={whatsapp} target="_blank" rel="noopener noreferrer" variant="solid">
+          <div className="mt-10 flex w-full flex-col items-center gap-3 sm:w-auto sm:flex-row sm:gap-6">
+            <Button href={whatsapp} target="_blank" rel="noopener noreferrer" variant="solid" className="w-full sm:w-auto">
               <ChatIcon />
               WhatsApp
             </Button>
-            <Button href={instagram} target="_blank" rel="noopener noreferrer" variant="solid">
+            <Button href={instagram} target="_blank" rel="noopener noreferrer" variant="solid" className="w-full sm:w-auto">
               <CameraIcon />
               Instagram
             </Button>
