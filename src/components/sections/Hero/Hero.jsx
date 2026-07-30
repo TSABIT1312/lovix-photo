@@ -67,7 +67,7 @@ function Hero({ image, images, title = 'Lovix Photo', subtitle = 'Capturing time
     >
       {slides.length > 0 ? (
         <>
-          <AnimatePresence initial={false} mode="sync">
+          <AnimatePresence initial={false} mode="wait">
             <motion.img
               key={slides[index]}
               src={slides[index]}
@@ -77,12 +77,12 @@ function Hero({ image, images, title = 'Lovix Photo', subtitle = 'Capturing time
               fetchPriority="high"
               initial={reduceMotion ? false : { opacity: 0, scale: 1.02 }}
               animate={reduceMotion ? undefined : { opacity: 1, scale: 1.06 }}
-              exit={reduceMotion ? undefined : { opacity: 0 }}
+              exit={reduceMotion ? undefined : { opacity: 0, transition: { duration: 0.5, ease: 'easeInOut' } }}
               transition={
                 reduceMotion
                   ? undefined
                   : {
-                      opacity: { duration: 1 },
+                      opacity: { duration: 0.6, ease: 'easeInOut' },
                       scale: { duration: 20, ease: 'linear' },
                     }
               }
