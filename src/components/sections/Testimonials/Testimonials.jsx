@@ -44,23 +44,38 @@ function Testimonials() {
   const active = testimonials[index]
 
   return (
-    <section id="testimonials" aria-label="Testimonials" className="bg-paper py-24 sm:py-32">
+    <section id="testimonials" aria-label="Testimonials" className="bg-paper py-16 sm:py-24 lg:py-32">
       <Container>
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, y: 24 }}
           whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mx-auto mb-16 max-w-xl text-center sm:mb-20"
+          className="mx-auto mb-6 max-w-xl text-center sm:mb-10 lg:mb-14"
         >
           <p className="font-display text-xs font-medium uppercase tracking-[0.4em] text-gold">Kind Words</p>
-          <p className="mt-6 font-display text-2xl italic text-ink sm:text-3xl">
-            What our couples say after the big day.
+          <p className="mt-4 font-display text-3xl italic text-ink sm:mt-6 sm:text-4xl lg:text-5xl">
+            Testimonials
           </p>
+          <span className="mx-auto mt-4 block h-px w-12 bg-gold/50 sm:mt-6" />
         </motion.div>
 
         <div className="mx-auto flex max-w-2xl flex-col items-center">
           <div className="relative w-full overflow-hidden">
+            {count > 1 && (
+              <button
+                type="button"
+                aria-label="Previous testimonial"
+                onClick={() => goTo(index - 1, -1)}
+                className={cn(
+                  'absolute left-0 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-ink/20 bg-paper/80 text-ink/60 backdrop-blur-sm transition-colors hover:border-ink hover:text-ink sm:h-9 sm:w-9',
+                  focusRing,
+                )}
+              >
+                <ArrowIcon direction="left" />
+              </button>
+            )}
+
             <AnimatePresence mode="wait" custom={direction} initial={false}>
               <motion.div
                 key={active.id}
@@ -76,68 +91,60 @@ function Testimonials() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={reduceMotion ? undefined : { opacity: 0, x: direction * -40 }}
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                className="w-full text-center"
+                className="w-full px-9 text-center sm:px-12"
                 style={{ cursor: count > 1 ? 'grab' : undefined }}
               >
+                <p className="text-sm leading-relaxed text-ink sm:text-xl lg:text-2xl">
+                  &ldquo;{active.quote}&rdquo;
+                </p>
                 {active.photo && (
                   <img
                     src={active.photo}
                     alt={active.name}
-                    className="mx-auto mb-6 h-20 w-20 rounded-full object-cover ring-1 ring-ink/10 sm:h-24 sm:w-24"
+                    className="mx-auto mt-8 mb-4 h-14 w-14 rounded-full object-cover ring-1 ring-ink/10 sm:mt-10 sm:mb-5 sm:h-20 sm:w-20 lg:h-24 lg:w-24"
                     draggable={false}
                   />
                 )}
-                <p className="font-display text-xl italic leading-relaxed text-ink sm:text-2xl">
-                  &ldquo;{active.quote}&rdquo;
+                <p className="text-xs font-medium uppercase tracking-[0.25em] text-ink/60">
+                  {active.name}
                 </p>
-                <p className="mt-8 text-xs font-medium uppercase tracking-[0.25em] text-ink/60">{active.name}</p>
-                <p className="mt-1 text-[0.65rem] uppercase tracking-[0.2em] text-ink/40">{active.role}</p>
+                <p className="mt-1 text-[0.6rem] uppercase tracking-[0.2em] text-ink/40 sm:text-[0.65rem]">
+                  {active.role}
+                </p>
               </motion.div>
             </AnimatePresence>
-          </div>
 
-          {count > 1 && (
-            <div className="mt-10 flex items-center gap-6">
-              <button
-                type="button"
-                aria-label="Previous testimonial"
-                onClick={() => goTo(index - 1, -1)}
-                className={cn(
-                  'flex h-9 w-9 items-center justify-center rounded-full border border-ink/20 text-ink/60 transition-colors hover:border-ink hover:text-ink',
-                  focusRing,
-                )}
-              >
-                <ArrowIcon direction="left" />
-              </button>
-
-              <div className="flex items-center gap-2">
-                {testimonials.map((testimonial, i) => (
-                  <button
-                    key={testimonial.id}
-                    type="button"
-                    aria-label={`Go to testimonial ${i + 1}`}
-                    aria-current={i === index}
-                    onClick={() => goTo(i, i > index ? 1 : -1)}
-                    className={cn(
-                      'h-1.5 rounded-full transition-all duration-300',
-                      focusRing,
-                      i === index ? 'w-6 bg-gold' : 'w-1.5 bg-ink/20 hover:bg-ink/40',
-                    )}
-                  />
-                ))}
-              </div>
-
+            {count > 1 && (
               <button
                 type="button"
                 aria-label="Next testimonial"
                 onClick={() => goTo(index + 1, 1)}
                 className={cn(
-                  'flex h-9 w-9 items-center justify-center rounded-full border border-ink/20 text-ink/60 transition-colors hover:border-ink hover:text-ink',
+                  'absolute right-0 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-ink/20 bg-paper/80 text-ink/60 backdrop-blur-sm transition-colors hover:border-ink hover:text-ink sm:h-9 sm:w-9',
                   focusRing,
                 )}
               >
                 <ArrowIcon direction="right" />
               </button>
+            )}
+          </div>
+
+          {count > 1 && (
+            <div className="mt-6 flex items-center gap-2 sm:mt-10">
+              {testimonials.map((testimonial, i) => (
+                <button
+                  key={testimonial.id}
+                  type="button"
+                  aria-label={`Go to testimonial ${i + 1}`}
+                  aria-current={i === index}
+                  onClick={() => goTo(i, i > index ? 1 : -1)}
+                  className={cn(
+                    'h-1.5 rounded-full transition-all duration-300',
+                    focusRing,
+                    i === index ? 'w-6 bg-gold' : 'w-1.5 bg-ink/20 hover:bg-ink/40',
+                  )}
+                />
+              ))}
             </div>
           )}
         </div>
