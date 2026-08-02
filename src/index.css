@@ -30,4 +30,14 @@
     background-color: var(--color-gold);
     color: var(--color-paper);
   }
+
+  /* Discourage casual saving of gallery/portfolio images (right-click save,
+     drag-to-desktop, iOS long-press callout). Not foolproof against a
+     determined user, but stops the common paths. Paired with the
+     contextmenu/dragstart guards in App.jsx. */
+  img {
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+    user-select: none;
+  }
 }
