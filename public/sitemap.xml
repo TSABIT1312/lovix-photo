@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Static sitemap — this SPA has no server/build step generating routes, so
+  this file is hand-maintained. Add a new <url> entry here whenever an album
+  is added to src/data/albums.js, and update the domain once it's real.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://lovixphoto.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://lovixphoto.com/stories/novus-jiva-villa-wedding</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lovixphoto.com/stories/prewedding-adha-shania</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

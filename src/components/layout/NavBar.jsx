@@ -12,9 +12,9 @@ const navLinkClass = cn(
  * (Hero / StoryCover) instead of pushing it down. The scrim behind the links
  * keeps the light text legible there and doesn't meaningfully change the
  * look of the plain-paper 404 page underneath it.
- * "View Stories" / "Contact" link to /#stories and /#contact regardless of
- * which page you're on — ScrollToTop handles the actual scrolling once the
- * homepage has mounted.
+ * "View Stories" / "Films" / "Contact" link to /#stories, /#films, and
+ * /#contact regardless of which page you're on — ScrollToTop handles the
+ * actual scrolling once the homepage has mounted.
  */
 function NavBar() {
   return (
@@ -36,6 +36,9 @@ function NavBar() {
       <nav className="flex items-center gap-4 sm:gap-8">
         <Link to="/#stories" className={navLinkClass}>
           View Stories
+        </Link>
+        <Link to="/#films" className={navLinkClass}>
+          Films
         </Link>
         <Link to="/#contact" className={navLinkClass}>
           Contact

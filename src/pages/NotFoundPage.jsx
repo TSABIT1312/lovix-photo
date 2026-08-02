@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
 import { cn, focusRing } from '@/lib/utils'
+import { useDocumentMeta } from '@/hooks/useDocumentMeta'
 
 function NotFoundPage() {
+  useDocumentMeta({ title: 'Page Not Found', noindex: true })
+
   return (
     <div className="flex min-h-svh flex-col items-center justify-center gap-6 bg-paper px-6 text-center">
       <p className="font-display text-2xl italic text-ink">This story couldn&apos;t be found.</p>

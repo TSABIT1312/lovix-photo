@@ -108,7 +108,7 @@ function Testimonials() {
                 <p className="text-xs font-medium uppercase tracking-[0.25em] text-ink/60">
                   {active.name}
                 </p>
-                <p className="mt-1 text-[0.6rem] uppercase tracking-[0.2em] text-ink/40 sm:text-[0.65rem]">
+                <p className="mt-1 text-[0.6rem] uppercase tracking-[0.2em] text-ink/70 sm:text-[0.65rem]">
                   {active.role}
                 </p>
               </motion.div>

@@ -4,11 +4,48 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1a1611" />
+    <meta name="robots" content="index, follow" />
     <title>Lovix Photo | Wedding Photography</title>
     <meta
       name="description"
       content="Premium wedding photography portfolio by Lovix Photo. Capturing timeless love stories through elegant and emotional imagery."
     />
+    <!-- TODO: replace with the real production domain once the site has one -->
+    <link rel="canonical" href="https://lovixphoto.com/" />
+
+    <!-- Open Graph / Twitter defaults — src/hooks/useDocumentMeta.js overrides
+         these per-route once React mounts. They stay here as the fallback for
+         link-preview bots that don't execute JS. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Lovix Photo" />
+    <meta property="og:title" content="Lovix Photo | Wedding Photography" />
+    <meta
+      property="og:description"
+      content="Premium wedding photography portfolio by Lovix Photo. Capturing timeless love stories through elegant and emotional imagery."
+    />
+    <meta property="og:url" content="https://lovixphoto.com/" />
+    <!-- TODO: add public/og-cover.jpg (1200x630) and point this at it -->
+    <meta property="og:image" content="https://lovixphoto.com/og-cover.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lovix Photo | Wedding Photography" />
+    <meta
+      name="twitter:description"
+      content="Premium wedding photography portfolio by Lovix Photo. Capturing timeless love stories through elegant and emotional imagery."
+    />
+    <meta name="twitter:image" content="https://lovixphoto.com/og-cover.jpg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Photographer",
+        "name": "Lovix Photo",
+        "description": "Wedding, prewedding, and engagement photography based in Jakarta and Banten.",
+        "url": "https://lovixphoto.com/",
+        "areaServed": ["Jakarta", "Banten"],
+        "sameAs": ["https://www.instagram.com/lovixphoto"]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
