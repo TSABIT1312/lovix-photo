@@ -93,8 +93,11 @@ function Testimonials() {
                 className="w-full px-9 text-center sm:px-12"
                 style={{ cursor: count > 1 ? 'grab' : undefined }}
               >
+                <p className="text-sm leading-relaxed text-ink sm:text-xl lg:text-2xl">
+                  &ldquo;{active.quote}&rdquo;
+                </p>
                 {active.photo && (
-                  <div className="mx-auto mb-8 h-14 w-14 overflow-hidden rounded-full ring-1 ring-ink/10 sm:mb-10 sm:h-20 sm:w-20 lg:h-24 lg:w-24">
+                  <div className="mx-auto mt-8 h-14 w-14 overflow-hidden rounded-full ring-1 ring-ink/10 sm:mt-10 sm:h-20 sm:w-20 lg:h-24 lg:w-24">
                     <img
                       src={active.photo}
                       alt={active.name}
@@ -107,9 +110,6 @@ function Testimonials() {
                     />
                   </div>
                 )}
-                <p className="text-sm leading-relaxed text-ink sm:text-xl lg:text-2xl">
-                  &ldquo;{active.quote}&rdquo;
-                </p>
                 <p className="mt-5 text-xs font-medium uppercase tracking-[0.25em] text-ink/60 sm:mt-8">
                   {active.name}
                 </p>
