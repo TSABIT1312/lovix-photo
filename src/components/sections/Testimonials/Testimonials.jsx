@@ -54,10 +54,9 @@ function Testimonials() {
           className="mx-auto mb-6 max-w-xl text-center sm:mb-10 lg:mb-14"
         >
           <p className="font-display text-xs font-medium uppercase tracking-[0.4em] text-gold">Kind Words</p>
-          <p className="mt-4 font-display text-3xl italic text-ink sm:mt-6 sm:text-4xl lg:text-5xl">
+          <p className="mt-4 text-lg text-ink sm:mt-6 sm:text-2xl lg:text-3xl">
             Testimonials
           </p>
-          <span className="mx-auto mt-4 block h-px w-12 bg-gold/50 sm:mt-6" />
         </motion.div>
 
         <div className="mx-auto flex max-w-2xl flex-col items-center">
@@ -94,21 +93,27 @@ function Testimonials() {
                 className="w-full px-9 text-center sm:px-12"
                 style={{ cursor: count > 1 ? 'grab' : undefined }}
               >
+                {active.photo && (
+                  <div className="mx-auto mb-8 h-14 w-14 overflow-hidden rounded-full ring-1 ring-ink/10 sm:mb-10 sm:h-20 sm:w-20 lg:h-24 lg:w-24">
+                    <img
+                      src={active.photo}
+                      alt={active.name}
+                      className="h-full w-full object-cover"
+                      style={{
+                        transform: `scale(${active.photoScale ?? 1.18})`,
+                        transformOrigin: active.photoOrigin ?? '50% 50%',
+                      }}
+                      draggable={false}
+                    />
+                  </div>
+                )}
                 <p className="text-sm leading-relaxed text-ink sm:text-xl lg:text-2xl">
                   &ldquo;{active.quote}&rdquo;
                 </p>
-                {active.photo && (
-                  <img
-                    src={active.photo}
-                    alt={active.name}
-                    className="mx-auto mt-8 mb-4 h-14 w-14 rounded-full object-cover ring-1 ring-ink/10 sm:mt-10 sm:mb-5 sm:h-20 sm:w-20 lg:h-24 lg:w-24"
-                    draggable={false}
-                  />
-                )}
-                <p className="text-xs font-medium uppercase tracking-[0.25em] text-ink/60">
+                <p className="mt-5 text-xs font-medium uppercase tracking-[0.25em] text-ink/60 sm:mt-8">
                   {active.name}
                 </p>
-                <p className="mt-1 text-[0.6rem] uppercase tracking-[0.2em] text-ink/70 sm:text-[0.65rem]">
+                <p className="mt-1 text-[0.6rem] uppercase tracking-[0.2em] text-ink/40 sm:text-[0.65rem]">
                   {active.role}
                 </p>
               </motion.div>
