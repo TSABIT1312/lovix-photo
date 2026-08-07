@@ -1,8 +1,5 @@
-import { useCallback, useRef, useState } from 'react'
-import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import Container from '@/components/ui/Container'
-import Lightbox from '@/components/sections/Lightbox/Lightbox'
-import { cn, focusRing } from '@/lib/utils'
 
 /**
  * The full wedding gallery — same CSS-columns masonry as the site's original
@@ -12,15 +9,6 @@ import { cn, focusRing } from '@/lib/utils'
  */
 function StoryGallery({ photos = [] }) {
   const reduceMotion = useReducedMotion()
-  const [activeIndex, setActiveIndex] = useState(null)
-  const triggerRefs = useRef([])
-
-  const handleClose = useCallback(() => {
-    setActiveIndex((current) => {
-      requestAnimationFrame(() => triggerRefs.current[current]?.focus())
-      return null
-    })
-  }, [])
 
   return (
     <section aria-label="Full wedding gallery" className="bg-paper py-24 sm:py-32">
@@ -39,16 +27,7 @@ function StoryGallery({ photos = [] }) {
               }}
               className="mb-3 break-inside-avoid sm:mb-8 lg:mb-10"
             >
-              <button
-                ref={(el) => (triggerRefs.current[index] = el)}
-                type="button"
-                onClick={() => setActiveIndex(index)}
-                aria-label={`Open larger view: ${photo.alt}`}
-                className={cn(
-                  'group relative block w-full cursor-zoom-in overflow-hidden border border-ink/10 bg-paper-soft',
-                  focusRing,
-                )}
-              >
+              <div className="relative block w-full overflow-hidden border border-ink/10 bg-paper-soft">
                 <img
                   src={photo.src}
                   alt={photo.alt}
@@ -56,25 +35,13 @@ function StoryGallery({ photos = [] }) {
                   height={photo.height}
                   loading="lazy"
                   decoding="async"
-                  className="block h-auto w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  className="block h-auto w-full object-cover"
                 />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-              </button>
+              </div>
             </motion.figure>
           ))}
         </div>
       </Container>
-
-      <AnimatePresence>
-        {activeIndex !== null && (
-          <Lightbox
-            photos={photos}
-            index={activeIndex}
-            onClose={handleClose}
-            onNavigate={setActiveIndex}
-          />
-        )}
-      </AnimatePresence>
     </section>
   )
 }
